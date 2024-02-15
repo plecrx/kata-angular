@@ -1,0 +1,23 @@
+db47b22d9ee6d184e5cde92fd6ebe93d
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AppComponent = void 0;
+const tslib_1 = require("tslib");
+const core_1 = require("@angular/core");
+const common_1 = require("@angular/common");
+const router_1 = require("@angular/router");
+let AppComponent = class AppComponent {
+    constructor() { }
+    ngOnInit() { }
+    static { this.ctorParameters = () => []; }
+};
+exports.AppComponent = AppComponent;
+exports.AppComponent = AppComponent = tslib_1.__decorate([
+    (0, core_1.Component)({
+        selector: 'app-root',
+        standalone: true,
+        imports: [common_1.CommonModule, router_1.RouterLink, router_1.RouterOutlet],
+        template: require("./app.component.html"),
+    })
+], AppComponent);
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJmaWxlIjoiQzpcXFVzZXJzXFxwcmVzY1xcV2Vic3Rvcm1Qcm9qZWN0c1xca2F0YS1hbmd1bGFyXFxzcmNcXGFwcFxcYXBwLmNvbXBvbmVudC50cyIsIm1hcHBpbmdzIjoiOzs7O0FBQUEsd0NBQWtEO0FBQ2xELDRDQUErQztBQUMvQyw0Q0FBMkQ7QUFTcEQsSUFBTSxZQUFZLEdBQWxCLE1BQU0sWUFBWTtJQUN2QixnQkFBZSxDQUFDO0lBRWhCLFFBQVEsS0FBVSxDQUFDOzs7QUFIUixvQ0FBWTt1QkFBWixZQUFZO0lBUHhCLElBQUEsZ0JBQVMsRUFBQztRQUNULFFBQVEsRUFBRSxVQUFVO1FBQ3BCLFVBQVUsRUFBRSxJQUFJO1FBQ2hCLE9BQU8sRUFBRSxDQUFDLHFCQUFZLEVBQUUsbUJBQVUsRUFBRSxxQkFBWSxDQUFDO1FBQ2pELHlDQUFtQztLQUNwQyxDQUFDO0dBRVcsWUFBWSxDQUt4QiIsIm5hbWVzIjpbXSwic291cmNlcyI6WyJDOlxcVXNlcnNcXHByZXNjXFxXZWJzdG9ybVByb2plY3RzXFxrYXRhLWFuZ3VsYXJcXHNyY1xcYXBwXFxhcHAuY29tcG9uZW50LnRzIl0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IENvbXBvbmVudCwgT25Jbml0IH0gZnJvbSAnQGFuZ3VsYXIvY29yZSc7XHJcbmltcG9ydCB7IENvbW1vbk1vZHVsZSB9IGZyb20gJ0Bhbmd1bGFyL2NvbW1vbic7XHJcbmltcG9ydCB7IFJvdXRlckxpbmssIFJvdXRlck91dGxldCB9IGZyb20gJ0Bhbmd1bGFyL3JvdXRlcic7XHJcblxyXG5AQ29tcG9uZW50KHtcclxuICBzZWxlY3RvcjogJ2FwcC1yb290JyxcclxuICBzdGFuZGFsb25lOiB0cnVlLFxyXG4gIGltcG9ydHM6IFtDb21tb25Nb2R1bGUsIFJvdXRlckxpbmssIFJvdXRlck91dGxldF0sXHJcbiAgdGVtcGxhdGVVcmw6ICcuL2FwcC5jb21wb25lbnQuaHRtbCcsXHJcbn0pXHJcblxyXG5leHBvcnQgY2xhc3MgQXBwQ29tcG9uZW50IGltcGxlbWVudHMgT25Jbml0IHtcclxuICBjb25zdHJ1Y3RvcigpIHt9XHJcblxyXG4gIG5nT25Jbml0KCk6IHZvaWQge31cclxuXHJcbn1cclxuIl0sInZlcnNpb24iOjN9

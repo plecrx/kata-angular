@@ -1,17 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink, RouterOutlet } from '@angular/router';
 
 @Component({
-  selector: 'app-root',
+  selector: 'app-home',
   standalone: true,
   imports: [CommonModule, RouterLink, RouterOutlet],
-  templateUrl: './app.component.html',
+  templateUrl: './home.component.html',
 })
-
-export class AppComponent implements OnInit {
+export class HomeComponent {
   constructor() {}
-
-  ngOnInit(): void {}
 
 }
