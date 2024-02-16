@@ -5,6 +5,7 @@
 > it's part of a repo series designed to create a Progressive Web App with Angular
 
 # Web Application Live Demo
+
 <p align="center">
   <p align="center">
     <a href="https://angular.ganatan.com/">
@@ -34,54 +35,58 @@ npm install
 npm start
 
 ```
-in your browser go to [http://localhost:4200](http://localhost:4200) 
+
+in your browser go to [http://localhost:4200](http://localhost:4200)
 
 ## Getting Started
 
-
 ### Installation
-* `npm install` (installing dependencies)
-* `npm outdated` (verifying dependencies)
+
+- `npm install` (installing dependencies)
+- `npm outdated` (verifying dependencies)
 
 ### Developpement
-* `npm run start`
-* in your browser [http://localhost:4200](http://localhost:4200) 
 
-### Production 
-* `npm run build`
+- `npm run start`
+- in your browser [http://localhost:4200](http://localhost:4200)
+
+### Production
+
+- `npm run build`
 
 ## Tests
-* `npm run test`
 
+- `npm run test`
 
 ### Prototype Bootstrap 5
-* `change directory` cd ui
-* launch html pages in your browser
 
+- `change directory` cd ui
+- launch html pages in your browser
 
 ### Angular & Docker
 
-* `build image`
-* docker build -t angular-starter:1.0.0 .
+- `build image`
+- docker build -t angular-starter:1.0.0 .
 
-* `run container`
-* docker run -d -p 4000:4000 angular-starter:1.0.0
+- `run container`
+- docker run -d -p 4000:4000 angular-starter:1.0.0
 
-* `run container mode bash`
-* docker run -it angular-starter:1.0.0 /bin/bash
+- `run container mode bash`
+- docker run -it angular-starter:1.0.0 /bin/bash
 
-
-* in your browser [http://localhost:4000](http://localhost:4000) 
-
+- in your browser [http://localhost:4000](http://localhost:4000)
 
 ### Author
-* Author  : danny
+
+- Author : danny
 
 ### Documentation
 
 English Tutorials
+
 - Tutorials Step-by-Step - https://www.ganatan.com/tutorials/en
 
 Tutoriels en français
+
 - Installation - https://www.ganatan.com/tutorials/modules-avec-angular
 - Tutoriels Etape par étape - https://www.ganatan.com/tutorials
