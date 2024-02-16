@@ -7,6 +7,7 @@ import { RouterLink, RouterOutlet } from "@angular/router";
   standalone: true,
   imports: [CommonModule, RouterLink, RouterOutlet],
   templateUrl: "./app.component.html",
+  styleUrl: "../styles.css",
 })
 export class AppComponent implements OnInit {
   constructor() {}
