@@ -1,1 +1,12 @@
-<p class="text-center">404 Page not found</p>
+<div class="flex flex-col items-center justify-center bg-teal-50 h-screen w-full overflow-none">
+    <div class="text-center">
+        <p class="text-base font-semibold text-teal-600">404</p>
+        <h1 class="mt-4 text-3xl font-bold tracking-tight text-gray-900 sm:text-5xl">Vous êtes perdu...</h1>
+        <p class="mt-6 text-base leading-7 text-gray-600">Pas de panique !</p>
+        <div class="mt-10 flex items-center justify-center gap-x-6">
+            <button (click)="navigateToHomePage()" class="shadow bg-teal-500 hover:bg-teal-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded" type="button">
+                Retourner sur la page d'accueil
+            </button>
+        </div>
+    </div>
+</div>

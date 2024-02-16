@@ -11,7 +11,7 @@ import { Router, RouterLink, RouterOutlet } from "@angular/router";
 export class HomeComponent {
   constructor(private router: Router) {}
 
-  navigateToProjectPage() {
-    this.router.navigate(["project"]);
+  navigateToPersonalInfoPage() {
+    this.router.navigate(["personal-info"]);
   }
 }

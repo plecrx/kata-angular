@@ -3,19 +3,19 @@ import { CommonModule } from "@angular/common";
 import { Router, RouterLink, RouterOutlet } from "@angular/router";
 
 @Component({
-  selector: "app-project",
+  selector: "app-personal-info",
   standalone: true,
   imports: [CommonModule, RouterLink, RouterOutlet],
-  templateUrl: "./project.component.html",
+  templateUrl: "./personal-info.component.html",
 })
-export class ProjectComponent {
+export class PersonalInfoComponent {
   constructor(private router: Router) {}
 
-  navigateToSummaryPage() {
-    this.router.navigate(["summary"]);
+  navigateToHomePage() {
+    this.router.navigate(["home"]);
   }
 
-  navigateToPersonalInfoPage() {
-    this.router.navigate(["personal-info"]);
+  navigateToProjectPage() {
+    this.router.navigate(["project"]);
   }
 }

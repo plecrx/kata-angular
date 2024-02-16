@@ -10,4 +10,8 @@ import { Router, RouterLink, RouterOutlet } from "@angular/router";
 })
 export class SummaryComponent {
   constructor(private router: Router) {}
+
+  navigateToPersonalInfoPage() {
+    this.router.navigate(["personal-info"]);
+  }
 }
