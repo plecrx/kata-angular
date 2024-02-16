@@ -1,9 +1,16 @@
 import { Routes } from "@angular/router";
 
-import { HomeComponent } from "./pages/home/home.component";
-import { NotFoundComponent } from "./pages/not-found/not-found.component";
+import {
+  HomeComponent,
+  NotFoundComponent,
+  ProjectComponent,
+  SummaryComponent,
+} from "./pages";
 
 export const routes: Routes = [
-  { path: "", component: HomeComponent },
+  { path: "", redirectTo: "/home", pathMatch: "full" },
+  { path: "home", component: HomeComponent },
+  { path: "project", component: ProjectComponent },
+  { path: "summary", component: SummaryComponent },
   { path: "**", component: NotFoundComponent },
 ];

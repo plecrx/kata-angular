@@ -3,15 +3,11 @@ import { CommonModule } from "@angular/common";
 import { Router, RouterLink, RouterOutlet } from "@angular/router";
 
 @Component({
-  selector: "app-home",
+  selector: "app-summary",
   standalone: true,
   imports: [CommonModule, RouterLink, RouterOutlet],
-  templateUrl: "./home.component.html",
+  templateUrl: "./summary.component.html",
 })
-export class HomeComponent {
+export class SummaryComponent {
   constructor(private router: Router) {}
-
-  navigateToProjectPage() {
-    this.router.navigate(["project"]);
-  }
 }
