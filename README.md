@@ -1,92 +1,56 @@
-# Angular 17 Example SSR
+# Kata Angular (Effy)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/1b31192b-4a21-432c-872d-b8e74cf52bcd/deploy-status)](https://app.netlify.com/sites/kata-angular/deploys)
 
-> An Angular starter kit featuring [Angular 17.1.3](https://angular.io), [Angular CLI 17.1.3](https://cli.angular.io/)
+An Angular application with SSR in order to compute the financial support for a project, hosted on Netlify. 
 
-> it's part of a repo series designed to create a Progressive Web App with Angular
+## Tech
 
-# Web Application Live Demo
+| Logo                                                                                                                       | Name           | Link                                                                                 |
+| -------------------------------------------------------------------------------------------------------------------------- |----------------| ------------------------------------------------------------------------------------ |
+| <img height="70" src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg" alt="Typescript logo"> | Typescript     | [https://github.com/microsoft/TypeScript](https://github.com/microsoft/TypeScript)   |
+| <img height="70" src="https://upload.wikimedia.org/wikipedia/commons/e/e3/ESLint_logo.svg" alt="ESLint logo">              | ESLint         | [https://github.com/eslint/eslint](https://github.com/eslint/eslint)                 |
+| <img height="70" src="https://prettier.io/icon.png" alt="Prettier logo">                                                   | Prettier       | [https://github.com/prettier/prettier](https://github.com/prettier/prettier)         |
+| <img height="70" src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg" alt="Typescript logo"> | Angular 17     | https://angular.io   |
 
-<p align="center">
-  <p align="center">
-    <a href="https://angular.ganatan.com/">
-      <img src="https://media.giphy.com/media/9BuBBLc7keCgRojp92/giphy.gif" alt="Angular 16 Example 
-      Application"/>
-    </a>
-  </p>
-</p>
+| Script     | Description                                                                            |
+|------------|----------------------------------------------------------------------------------------|
+| `ng`      | Starts the development server.                                                         |
+| `build`    | Compiles TypeScript files and builds the production-ready application with Vite.       |
+| `serve:ssr:angular-starter`    | Run the application in SSR mode.       |
+| `format` | Format source code.                                                                    |
+| `test`     | Runs unit tests with Jest.                                                           |
+| `lint`     | Runs ESLint on all relevant files.                                                     |
+| `postinstall`  | Install Husky hooks.                                                                   |
 
-## Quick start
 
+## Get started
+
+1. Clone this repo.
 ```bash
-# choose a repo
-# download the example or clone the repo from github
-git clone https://github.com/ganatan/angular-ssr.git
-
-# download the example or clone the repo from gitlab
-git clone https://gitlab.com/ganatan/angular-ssr.git
-
-# change directory
-cd angular-ssr
-
-# install the repo with npm
-npm install
-
-# start the server
-npm start
-
+git clone git@github.com:plecrx/kata-angular.git
+cd kata-angular
 ```
 
-in your browser go to [http://localhost:4200](http://localhost:4200)
+2. Install all dependencies. (yarn as default)
+```bash
+yarn
+```
 
-## Getting Started
+## Project structure
 
-### Installation
+-   `.husky/` : scripts which lint and format the staged files before committing
+-   `.jest/` : The cache for jest tests
+-   `src/` : The application source code
+    -   `app/` : The static files (fonts, images, ...)
+    -   `components/` : The components which will be used in pages
+    -   `services/` : The services to manage data
+    -   `pages/` : The application pages
+    -   `types/` : Global types
+    -   `config/` : App and server configuration files
+    -   `main.ts` : The app entry point
+    -   `main.server.ts` : The server entry point
+    -   `routes.ts` : React routes configuration files
 
-- `npm install` (installing dependencies)
-- `npm outdated` (verifying dependencies)
+## Author
 
-### Developpement
-
-- `npm run start`
-- in your browser [http://localhost:4200](http://localhost:4200)
-
-### Production
-
-- `npm run build`
-
-## Tests
-
-- `npm run test`
-
-### Prototype Bootstrap 5
-
-- `change directory` cd ui
-- launch html pages in your browser
-
-### Angular & Docker
-
-- `build image`
-- docker build -t angular-starter:1.0.0 .
-
-- `run container`
-- docker run -d -p 4000:4000 angular-starter:1.0.0
-
-- `run container mode bash`
-- docker run -it angular-starter:1.0.0 /bin/bash
-
-- in your browser [http://localhost:4000](http://localhost:4000)
-
-### Author
-
-- Author : danny
-
-### Documentation
-
-English Tutorials
-
-- Tutorials Step-by-Step - https://www.ganatan.com/tutorials/en
-
-Tutoriels en français
-
-- Installation - https://www.ganatan.com/tutorials/modules-avec-angular
-- Tutoriels Etape par étape - https://www.ganatan.com/tutorials
+[Prescilla Lecurieux](mailto:prescilla.lecurieux@gmail.com)
