@@ -32,13 +32,6 @@ export class PersonalInfoPageComponent {
     this.router.navigate(["home"]);
   }
 
-  handleNextPageClick(): void {
-    if (!this.formData.valid) {
-      return;
-    }
-    this.navigateToProjectPage();
-  }
-
   navigateToProjectPage(): void {
     this.saveForm();
     this.router.navigate(["project"]);

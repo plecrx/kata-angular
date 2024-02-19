@@ -14,14 +14,26 @@ import { FormDataService } from "../../services/form-data.service";
     FormsModule,
     ReactiveFormsModule,
   ],
-  templateUrl: "./project.component.html",
+  templateUrl: "./project.page.html",
 })
-export class ProjectComponent {
+export class ProjectPageComponent {
+  nbPeopleOptions: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  formData: FormGroup;
+
   constructor(
     private router: Router,
     private formDataService: FormDataService,
-  ) {}
+  ) {
+    this.formData = this.getFormData();
+  }
 
+  isInvalid(fieldName: string): boolean {
+    return this.formDataService.isInvalid(fieldName);
+  }
+
+  getErrorMessage(fieldName: string): string {
+    return this.formDataService.getErrorMessage(fieldName);
+  }
   navigateToPersonalInfoPage() {
     this.saveForm();
     this.router.navigate(["personal-info"]);

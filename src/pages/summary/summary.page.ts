@@ -11,9 +11,9 @@ import { CalculationResult } from "../../types/calculation-result";
   selector: "app-summary",
   standalone: true,
   imports: [CommonModule, RouterLink, RouterOutlet],
-  templateUrl: "./summary.component.html",
+  templateUrl: "./summary.page.html",
 })
-export class SummaryComponent implements OnInit {
+export class SummaryPageComponent implements OnInit {
   formData: EffyFormData = {} as EffyFormData;
   results: CalculationResult = {} as CalculationResult;
 
