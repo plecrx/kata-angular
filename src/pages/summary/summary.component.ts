@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { Router, RouterLink, RouterOutlet } from "@angular/router";
 import { AmountFormatService } from "../../services/amount-format.service";
@@ -13,7 +13,7 @@ import { CalculationResult } from "../../types/calculation-result";
   imports: [CommonModule, RouterLink, RouterOutlet],
   templateUrl: "./summary.component.html",
 })
-export class SummaryComponent {
+export class SummaryComponent implements OnInit {
   formData: EffyFormData = {} as EffyFormData;
   results: CalculationResult = {} as CalculationResult;
 

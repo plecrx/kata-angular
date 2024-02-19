@@ -1,5 +1,10 @@
 import { Injectable } from "@angular/core";
-import { FormBuilder, FormGroup, Validators } from "@angular/forms";
+import {
+  AbstractControl,
+  FormBuilder,
+  FormGroup,
+  Validators,
+} from "@angular/forms";
 import { EffyFormData } from "../types";
 
 @Injectable({ providedIn: "root" })
@@ -42,5 +47,25 @@ export class FormDataService {
 
   resetForm(): void {
     this.formData.reset(this.defaultFormData);
+  }
+
+  isInvalid(fieldName: string): boolean {
+    const control = this.getFormControl(fieldName);
+
+    return !!(control?.invalid && (control.dirty || control.touched));
+  }
+
+  getErrorMessage(fieldName: string): string {
+    const control = this.getFormControl(fieldName);
+
+    if (control?.hasError("required")) {
+      return `Le champ ${fieldName} est requis.`;
+    }
+
+    return "";
+  }
+
+  private getFormControl(fieldName: string): AbstractControl | null {
+    return this.formData.get(fieldName);
   }
 }

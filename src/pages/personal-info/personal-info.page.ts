@@ -11,25 +11,21 @@ import { FormDataService } from "../../services/form-data.service";
   templateUrl: "./personal-info.page.html",
 })
 export class PersonalInfoPageComponent {
+  formData: FormGroup;
   civilityOptions: string[] = ["Mlle", "Madame", "Monsieur"];
   constructor(
     private router: Router,
     private formDataService: FormDataService,
-  ) {}
+  ) {
+    this.formData = this.getFormData();
+  }
 
   isInvalid(fieldName: string): boolean {
-    const control = this.getFormData().get(fieldName);
-
-    return !!(control?.invalid && (control.dirty || control.touched));
+    return this.formDataService.isInvalid(fieldName);
   }
 
   getErrorMessage(fieldName: string): string {
-    const field = this.getFormData().get(fieldName);
-    if (field?.hasError("required")) {
-      return `Le champ ${fieldName} est requis.`;
-    }
-
-    return "";
+    return this.formDataService.getErrorMessage(fieldName);
   }
 
   navigateToHomePage(): void {
@@ -37,8 +33,7 @@ export class PersonalInfoPageComponent {
   }
 
   handleNextPageClick(): void {
-    const formData = this.getFormData();
-    if (!formData.valid) {
+    if (!this.formData.valid) {
       return;
     }
     this.navigateToProjectPage();
