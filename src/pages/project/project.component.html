@@ -1,21 +1,19 @@
 <div class="flex flex-col items-center justify-center gap-16 bg-teal-50 h-screen w-full overflow-none p-8 md:p-0">
     <span class="text-teal-500 uppercase text-4xl sm:2xl font-bold">Mon projet</span>
-    <form class="flex flex-col gap-6 w-full max-w-lg">
+    <form class="flex flex-col gap-6 w-full max-w-lg" [formGroup]="getFormData()" (ngSubmit)="navigateToSummaryPage()">
         <label class="block text-gray-500 font-bold">
-            <input class="mr-2 leading-tight cursor-pointer h-4 w-4 rounded border-gray-300 text-teal-600 focus:ring-teal-600" type="checkbox">
+            <input formControlName="isOwner" class="mr-2 leading-tight cursor-pointer h-4 w-4 rounded border-gray-300 text-teal-600 focus:ring-teal-600" type="checkbox"/>
             <span class="text-sm">
                 Je suis propriétaire
             </span>
         </label>
         <div class="w-full">
-            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="household-people">
+            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="nbPeople">
                 Nombre de personnes dans le foyer
             </label>
             <div class="relative">
-                <select class="block appearance-none cursor-pointer w-full bg-white border border-gray-500 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:border-gray-500 focus:border-2" id="household-people">
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
+                <select formControlName="nbPeople" class="block appearance-none cursor-pointer w-full bg-white border border-gray-500 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:border-gray-500 focus:border-2" id="nbPeople">
+                    <option *ngFor="let i of [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]">{{ i }}</option>
                 </select>
                 <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
                     <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
@@ -30,7 +28,7 @@
                 <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3">
                     <span class="text-gray-500 sm:text-sm">k €</span>
                 </div>
-                <input class="appearance-none block w-full bg-white text-gray-700 border border-gray-500 rounded py-3 px-4 leading-tight focus:outline-none focus:border-gray-900 focus:border-2" id="incomes" type="text" placeholder="40">
+                <input formControlName="incomes" class="appearance-none block w-full bg-white text-gray-700 border border-gray-500 rounded py-3 px-4 leading-tight focus:outline-none focus:border-gray-900 focus:border-2" id="incomes" type="text" placeholder="40">
             </div>
         </div>
         <div class="w-full">
@@ -41,14 +39,14 @@
                 <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3">
                     <span class="text-gray-500 sm:text-sm">m²</span>
                 </div>
-                <input class="appearance-none block w-full bg-white text-gray-700 border border-gray-500 rounded py-3 px-4 leading-tight focus:outline-none focus:border-gray-900 focus:border-2" id="property-surface" type="text" placeholder="50">
+                <input formControlName="propertySize" class="appearance-none block w-full bg-white text-gray-700 border border-gray-500 rounded py-3 px-4 leading-tight focus:outline-none focus:border-gray-900 focus:border-2" id="property-surface" type="text" placeholder="50">
             </div>
         </div>
         <div class="flex flex-col gap-4 px-24 mt-8">
             <button (click)="navigateToPersonalInfoPage()" class="shadow bg-neutral-100 hover:bg-neutral-50 focus:shadow-outline focus:outline-none text-neutral-500 font-bold py-2 px-4 rounded" type="button">
                 Etape précédente
             </button>
-            <button (click)="navigateToSummaryPage()" class="shadow bg-teal-500 hover:bg-teal-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded" type="button">
+            <button (click)="navigateToSummaryPage()" class="shadow bg-teal-500 hover:bg-teal-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded" type="submit">
                 Terminer
             </button>
         </div>

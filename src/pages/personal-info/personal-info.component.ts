@@ -1,12 +1,13 @@
 import { Component } from "@angular/core";
 import { CommonModule } from "@angular/common";
+import { FormGroup, ReactiveFormsModule } from "@angular/forms";
 import { Router, RouterLink, RouterOutlet } from "@angular/router";
 import { FormDataService } from "../../services/form-data.service";
 
 @Component({
   selector: "app-personal-info",
   standalone: true,
-  imports: [CommonModule, RouterLink, RouterOutlet],
+  imports: [CommonModule, RouterLink, RouterOutlet, ReactiveFormsModule],
   templateUrl: "./personal-info.component.html",
 })
 export class PersonalInfoComponent {
@@ -15,17 +16,21 @@ export class PersonalInfoComponent {
     private formDataService: FormDataService,
   ) {}
 
-  navigateToHomePage() {
+  navigateToHomePage(): void {
     this.router.navigate(["home"]);
   }
 
-  navigateToProjectPage() {
+  navigateToProjectPage(): void {
     this.saveForm();
     this.router.navigate(["project"]);
   }
 
-  private saveForm() {
+  protected getFormData(): FormGroup {
+    return this.formDataService.getForm();
+  }
+
+  private saveForm(): void {
     const formData = this.formDataService.getForm().value;
-    this.formDataService.getForm().patchValue(formData);
+    this.formDataService.saveFormData(formData);
   }
 }

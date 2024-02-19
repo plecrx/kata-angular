@@ -8,13 +8,13 @@ export class FormDataService {
 
   private readonly defaultFormData: EffyFormData = {
     civility: "",
-    lastName: "",
-    firstName: "",
+    lastname: "",
+    firstname: "",
     email: "",
     phoneNumber: "",
     isOwner: false,
-    numPeople: 0,
-    income: 0,
+    nbPeople: 0,
+    incomes: 0,
     propertySize: 0,
   };
 
@@ -24,6 +24,10 @@ export class FormDataService {
 
   getForm(): FormGroup {
     return this.formData;
+  }
+
+  saveFormData(value: FormGroup): void {
+    this.formData.patchValue(value);
   }
 
   resetForm(): void {

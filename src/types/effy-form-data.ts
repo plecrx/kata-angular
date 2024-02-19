@@ -1,11 +1,11 @@
 export type EffyFormData = {
   civility: string;
-  lastName: string;
-  firstName: string;
+  lastname: string;
+  firstname: string;
   email: string;
   phoneNumber: string;
   isOwner: boolean;
-  numPeople: number;
-  income: number;
+  nbPeople: number;
+  incomes: number;
   propertySize: number;
 };

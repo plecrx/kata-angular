@@ -1,6 +1,7 @@
 import { Component } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { Router, RouterLink, RouterOutlet } from "@angular/router";
+import { AmountFormatService } from "../../services/amount-format.service";
 import { CalculatorService } from "../../services/calculator.service";
 import { FormDataService } from "../../services/form-data.service";
 import { EffyFormData } from "../../types";
@@ -20,6 +21,7 @@ export class SummaryComponent {
     private router: Router,
     private formDataService: FormDataService,
     private calculatorService: CalculatorService,
+    private amountFormatService: AmountFormatService,
   ) {}
 
   ngOnInit() {
@@ -28,6 +30,15 @@ export class SummaryComponent {
   }
 
   navigateToPersonalInfoPage() {
+    this.resetForm();
     this.router.navigate(["personal-info"]);
+  }
+
+  resetForm() {
+    this.formDataService.resetForm();
+  }
+
+  protected formatAmount(amount: number): string {
+    return this.amountFormatService.formatAmount(amount);
   }
 }
