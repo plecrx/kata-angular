@@ -1,5 +1,5 @@
 import { Injectable } from "@angular/core";
-import { FormBuilder, FormGroup } from "@angular/forms";
+import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 import { EffyFormData } from "../types";
 
 @Injectable({ providedIn: "root" })
@@ -19,7 +19,17 @@ export class FormDataService {
   };
 
   constructor(private formBuilder: FormBuilder) {
-    this.formData = this.formBuilder.group(this.defaultFormData);
+    this.formData = this.formBuilder.group({
+      civility: ["", Validators.required],
+      lastname: ["", Validators.required],
+      firstname: ["", Validators.required],
+      email: ["", Validators.required],
+      phoneNumber: ["", Validators.required],
+      isOwner: [false, Validators.required],
+      nbPeople: [0, Validators.required],
+      incomes: [0, Validators.required],
+      propertySize: [0, Validators.required],
+    });
   }
 
   getForm(): FormGroup {

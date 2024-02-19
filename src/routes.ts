@@ -5,13 +5,13 @@ import {
   NotFoundComponent,
   ProjectComponent,
   SummaryComponent,
-  PersonalInfoComponent,
+  PersonalInfoPageComponent,
 } from "./pages";
 
 export const routes: Routes = [
   { path: "", redirectTo: "/home", pathMatch: "full" },
   { path: "home", component: HomeComponent },
-  { path: "personal-info", component: PersonalInfoComponent },
+  { path: "personal-info", component: PersonalInfoPageComponent },
   { path: "project", component: ProjectComponent },
   { path: "summary", component: SummaryComponent },
   { path: "**", component: NotFoundComponent },
